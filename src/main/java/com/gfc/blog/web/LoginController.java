@@ -3,7 +3,6 @@ package com.gfc.blog.web;
 import com.gfc.blog.Constant.RoleConstant;
 import com.gfc.blog.model.UserEntity;
 import com.gfc.blog.service.UserService;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -25,7 +24,7 @@ public class LoginController {
     @ApiOperation(value="主页index", notes="")
     @GetMapping({"/","/index","/home"})
     public String homePage (){
-        return "index";
+        return "blog/index";
     }
 
     @ApiOperation(value="登录页面", notes="")
