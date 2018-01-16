@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head charset="UTF-8">
+    <meta charset="UTF-8" />
+    <title>代码错误</title>
+    <script type="text/javascript" src="/js/common/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<p>代码错误500</p>
+<!-- TODO -->
+<div th:text="${url}"></div>
+<div th:text="${exception}"></div>
+<button onclick="test()">test</button>
+<script>
+    function test() {
+        $.ajax({
+            type: "POST",
+            url: '/test',
+            contentType:"application/json",
+            data: {},
+            success: function (data) {///去更新cookies
+                alert(data.msg);
+            }
+        })
+    }
+</script>
+</body>
+</html>

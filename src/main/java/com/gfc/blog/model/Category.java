@@ -1,0 +1,35 @@
+package com.gfc.blog.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+/**
+ * 文章分类
+ */
+@Entity
+@Table(name="tag")
+public class Category implements Serializable{
+    @Id
+    @GeneratedValue
+    private Integer id;
+    private String categoryName;          //分类名
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+}
