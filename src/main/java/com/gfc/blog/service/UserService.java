@@ -13,15 +13,15 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
-    /**新增用户*/
+
+    /*新增用户*/
     public boolean save(UserEntity userEntity){
-        System.out.println(userEntity.getId()==null);
-        userEntity = userRepository.save(userEntity);
+        userRepository.save(userEntity);
         if(userEntity.getId()==null) return false;
         return true;
     }
 
-    /**查询用户*/
+    /* 根据username 查询用户*/
     public UserEntity findByName(String username){
         return  userRepository.findByUsername(username);
     }

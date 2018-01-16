@@ -13,7 +13,7 @@ public class ErrorLogService {
     @Autowired
     ErrorLogRepository errorLogRepository;
 
-    /** 保存日志信息  可返回带id的实体 */
+    /* 保存日志信息  可返回带id的实体 */
     public void save(ErrorLog errorLog){
         errorLogRepository.save(errorLog);
     }
